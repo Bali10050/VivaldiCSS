@@ -155,7 +155,7 @@ color: var(--colorAccentFg)}
 
 
 .panel-group .ToolbarButton-Button{padding: 3px;}
-.panel-group .ToolbarButton-Button,.sortselector-dropdown, .panel-group .button-toolbar,
+.panel-group .ToolbarButton-Button,.sortselector-dropdown, .panel-group .button-toolbar, .NotesEditor .button-toolbar button,
 .sortselector, .sortselector-button, .select-wrapper select, [aria-label="Swap To/From Languages"], .TranslatePanel-BottomToolbar input, .TranslatePanel-ShowTranslateHistory input{
     border: none !important;
     background-image: none !important;
@@ -170,7 +170,7 @@ color: var(--colorAccentFg)}
 .webpanel-header{box-shadow: none !important}
 .panel-group .webpanel-content, #switch{border-radius: 10px 10px 0 0}
 .select-wrapper select{padding: 9px; height: 35px}
-.sortselector-dropdown, .sortselector-button, .panel-group .button-toolbar, [title="Switch to Desktop View"], .panel-group .ToolbarButton-Button{margin-right: 0px !important;}
+.sortselector-dropdown, .sortselector-button, .panel-group .button-toolbar, [title="Switch to Desktop View"], .panel-group .ToolbarButton-Button, .NotesEditor .button-toolbar button{margin-right: 0px !important;}
 .panel [placeholder="Search"] {
     border: none;
     padding: 16px;
@@ -185,4 +185,29 @@ color: var(--colorAccentFg)}
 .color-behind-tabs-off .settings-header{color: var(--colorAccentFg) !important}
 
 
+.is-settingspage [type="radio"], [type="checkbox"]{background-image: none !important; transition: .2s}
+.is-settingspage [type="radio"]:not([checked]):hover, .is-settingspage [type="checkbox"]:not([checked]):hover, .is-settingspage [type="button"]:hover{background: var(--colorBgDarker) !important; transition: .25s}
+.is-settingspage [type="radio"][checked]:hover{ transition: .25s; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) inset, inset 0 0 0 5px var(--colorHighlightBgFaded) !important;}
+.is-settingspage [type="checkbox"][checked]:hover{background: var(--colorHighlightBgFaded) !important; border-color: var(--colorHighlightBgFaded) !important;}
+.is-settingspage [type="button"]{
+    background-image: none !important;
+    border: none !important;
+    background-color: var(--colorBgDark) !important;
+}
 
+.button-category:hover{background: color-mix(in srgb, var(--colorFgAlpha) 60%, transparent) !important}
+.select-wrapper select:hover{background: var(--colorBgDarker) !important; transition: .2s}
+.select-wrapper select{
+    padding: 0 29px 0 14px !important;
+    margin-right: -3px !important;
+}
+
+.selectbox-image:hover, .ThemePreview-Image:hover{
+    outline: color-mix(in srgb, var(--colorHighlightBg) 60%, transparent) 3px solid;
+}
+.SpeedDialView-Settings .row{margin-top: 10px !important}
+.SpeedDialView-Settings{
+    margin: 0 -7px 9px 0;
+    border-radius: var(--radius);
+}
+.SpeedDialView-Settings .button-icon{margin-left: 13px;}
