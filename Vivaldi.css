@@ -1,0 +1,147 @@
+/* vivaldi:inspect/#apps */
+:root{
+--tab-border-radius: 6px !important; /*  Tab border radius -- Changes the tabs rounding  *//*  Default: 3px  */
+--NavbarWidth: 43; /*  Default values: 36 - 43  */
+--TabsHeight: 36; /*  Minimum: 30  *//*  Default: 36  */
+--TabsBorder: 8; /*  Doesnt do anything on small layout  *//*  Default: 8  */
+--Width: 430px !important;
+--NavbarHeightSmall: calc(var(--TabsHeight) + var(--TabsBorder))  /*  Only on small layout  *//*  Default: calc(var(--TabsHeight) + var(--TabsBorder))  *//*  Default as a number: 44  */
+
+}
+
+@media screen and (min-width:1325px)    /*  Only the tabs space will grow from here  */
+{#main{margin-top: calc(var(--TabsHeight) * -1px - var(--TabsBorder) * 1px)!important;} #main .mainbar{ height: calc(var(--TabsHeight) * 1px + var(--TabsBorder) * 1px + 2px)} #header{z-index: 1; margin-left: calc(1325px / 100 * var(--NavbarWidth)) !important} #main .mainbar{margin-right: calc(100vw - calc(1325px / 100 * var(--NavbarWidth))) !important; vertical-align: center !important} #urlbar-container{min-width: 0px !important;  flex: auto !important} toolbarspring{display: none !important}}
+
+@media screen and (min-width:850px) and (max-width:1324px)    /*  Both the tabs space and the navbar will grow  */
+{#main{margin-top: calc(var(--TabsHeight) * -1px - var(--TabsBorder) * 1px) !important;} #main .mainbar{ height: calc(var(--TabsHeight) * 1px + var(--TabsBorder) * 1px + 2px)} #header{z-index: 1; margin-left: calc(var(--NavbarWidth) * 1vw) !important} #main .mainbar{margin-right: calc(100vw - calc(var(--NavbarWidth) * 1vw)) !important; vertical-align: center !important} #urlbar-container{min-width: 0px !important;  flex: auto !important} toolbarspring{display: none !important} #header, #main .mainbar{transition: margin-top .25s !important}}
+
+@media screen and (max-width:849px)    /*  The window is not enough wide for a one line layout  */
+{#main .mainbar{padding: 0 5px 0 5px!important; height: calc(var(--NavbarHeightSmall) * 1px) !important} toolbarspring{display: none !important;} #header, #main .mainbar{transition: margin-top .25s !important}}
+#main .mainbar, #PersonalToolbar{background-color: #0000 !important;background-image: none !important; box-shadow: none !important} #main .mainbar{margin-left: 3px; border-top: none !important} .tab-background, .tab-stack { min-height: calc(var(--TabsHeight) * 1px) !important}
+/**/
+
+#browser:not(.fullscreen) .inner{border-radius: 10px 10px 0 0;}
+
+/**/
+#browser .window-buttongroup button:not(:hover):not(:active){background: none !important}
+
+/*  Titlebar buttons  -  Minimize button  */
+button.window-minimize {fill: var(--toolbarbutton-icon-fill) !important; -moz-context-properties: fill !important; border-radius: 0!important; margin: 0!important; padding: 0!important; border: 0!important; height: 44px!important; align-content: center!important; width: 56px!important; appearance: none!important}button.window-minimize:hover {background-color: color-mix(in srgb,currentColor 17%,transparent)!important}button.window-minimize:active {background-color: color-mix(in srgb,currentColor 30%,transparent)!important}
+
+/*  Titlebar buttons  -  Maximize button  */
+button.window-maximize {fill: var(--toolbarbutton-icon-fill) !important; -moz-context-properties: fill !important; border-radius: 0!important; margin: 0!important; padding: 0!important; border: 0!important; height: 44px!important; align-content: center!important;width: 56px!important; appearance: none!important}button.window-maximize:hover {background-color: color-mix(in srgb,currentColor 17%,transparent)!important}button.window-maximize:active {background-color: color-mix(in srgb,currentColor 30%,transparent)!important}
+
+/*  Titlebar buttons  -  Restore button  */
+button.window-maximize {fill: var(--toolbarbutton-icon-fill) !important; -moz-context-properties: fill !important; border-radius: 0!important; margin: 0!important; padding: 0!important; border: 0!important; height: 44px!important;width: 56px!important; appearance: none!important}.window-maximize:hover {background-color: color-mix(in srgb,currentColor 17%,transparent)!important}.window-maximize:active {background-color: color-mix(in srgb,currentColor 30%,transparent)!important}
+
+/*  Titlebar buttons  -  Close button  */
+button.window-close:not(:hover, :active) {fill: var(--toolbarbutton-icon-fill) !important; -moz-context-properties: fill !important;  margin: 0 !important; padding: 0!important; border: 0!important; border-radius: 0!important; height: 44px!important; width: 56px!important; appearance: none!important}
+button.window-close:hover {background-color: #f44!important; fill: var(--toolbarbutton-icon-fill) !important; -moz-context-properties: fill !important;  margin: 0 !important; padding: 0!important; border: 0!important; border-radius: 0!important; height: 44px!important; width: 56px!important; appearance: none!important}
+button.window-close:active {background-color: #f33!important;  fill: var(--toolbarbutton-icon-fill) !important; -moz-context-properties: fill !important;  margin: 0 !important; padding: 0!important; border: 0!important; border-radius: 0!important; height: 44px!important; width: 56px!important; appearance: none!important}
+
+#header{margin-right: 168px;}
+
+.window-buttongroup{position: fixed !important; right: 0 !important; top: 0 !important;}
+#header, #tabs-tabbar-container, .tabbar-wrapper{background: #0000 !important}
+.mainbar{border:none !important; padding-left: 50px !important;}
+
+/**/
+#titlebar>.vivaldi{position:fixed; z-index: 2;
+width: 32px;
+height: 32px;
+margin-left: 5px;
+padding-right: 5px;
+border-radius: 6px;
+}
+
+#titlebar>.vivaldi .expand-arrow {display: none}
+
+
+#Rectangle\ 42{display: none}
+.tabs-button {position: absolute; top: -6px; right: -90px; width: 56px; height: 44px;}
+.tabs-button .ToolbarButton-Button{height: 100% !important; border-radius: 0px;}
+.vivaldi-v>svg>path{d: path("m 3.1458476,3 a 1.1458877,1.1458877 0 0 0 0,2.2917751 H 22.855112 A 1.1458877,1.1458877 0 0 0 22.855112,3 Z m 0,7.33368 a 1.1458878,1.1458878 0 0 0 0,2.291775 H 22.855112 a 1.1458878,1.1458878 0 0 0 0,-2.291775 z m 0,7.33368 a 1.1458877,1.1458877 0 0 0 0,2.291768 H 22.855112 a 1.1458877,1.1458877 0 0 0 0,-2.291768 z") !important;}
+.vivaldi-v>svg{height: 12px;}
+
+
+.toolbar-mainbar{top: 4px}
+/*.toolbar-spacer-panel{display: none}*/
+.mainbar>div{height: 100%; margin-left: -10px;}
+.bookmark-bar, .bookmarkbarItem{background: none !important; border: none;}
+
+
+
+.tab{min-width: 72px !important; border-radius: 6px !important;}
+.tab:not(.active):not(:hover){ background: none !important;}
+.resize{height: 36px !important; margin-top: -2px}
+.tab-header{margin-top: auto; margin-bottom: auto;}
+#tabs-container{padding-left: 0px !important;}
+
+.tab.active{background-color: var(--colorHighlightFgAlphaHeavy) !important;}
+.tab:not(.active):hover{background-color: color-mix(in srgb, var(--colorHighlightFgAlphaHeavy) 40%, transparent) !important;}
+.UrlBar-AddressField{border-radius: 6px; height: inherit;}
+
+/*  Cool animation on tab/bookmark icons  */
+.tab:not([pinned]):not(.active) .favicon ,.bookmarkbarItem :not(.title){filter: none !important; opacity: 0!important; transition: .15s !important; width: 0!important; padding-left: 16px!important}
+.tab:not([pinned]):hover .favicon,.bookmarkbarItem:hover :not(.title){filter: none !important; opacity: 100!important; transition: .15s !important; display: inline-block!important; width: 16px!important; padding-left: 0!important}
+.tab:not([hover]) .favicon,.bookmarkbarItem:not([hover]) :not(.title){filter: none !important;padding-left: 0!important}
+
+.close{background: none !important; opacity: 100% !important;transition: .3s !important;}
+
+.newtab button{background: none !important; opacity: 30% !important;transition: .3s !important;}
+.newtab button:hover{background: none !important; opacity: 100% !important;transition: .3s !important;}
+
+
+
+.close path{d: path("M5.116 6 2 9.116l.884.884L6 6.884 9.116 10 10 9.116 6.884 6 10 2.884 9.116 2 6 5.116 2.884 2 2 2.884 5.116 6z");}
+
+.close svg{ width: 12px ;height: 12px; opacity: 100%;transition: .3s !important;}
+
+
+
+
+.close:not(:hover) svg{opacity: 30%;transition: .3s !important;}
+
+
+
+
+.OmniDropdown-Collection li{height: 40px !important}
+.toolbar-tabbar{display: none !important}
+
+.ToolbarButton-Button:not([name=TabButton]){border-radius: 6px !important; margin: -1px; height: 32px !important; width: 32px !important}
+.ToolbarButton-Button:hover{background-color: var(--colorAccentBgAlpha) !important;}
+
+
+
+.is-settingspage #header{ width: calc(100vw - 168px) !important;   margin-left: 0px !important;
+    margin-bottom: 33px;
+    height: 55px;}
+.settings-header{
+    width: calc(100vw - 168px) !important;
+    top: 0px !important;
+    left: 0px !important;
+    height: 44px !important;
+        display: flex !important;
+        justify-content: flex-start !important;
+        padding-left: 20px
+
+}
+
+
+
+/**/
+:has(> [title="Scroll over Tab Bar to switch tabs by order, or scroll anywhere else while holding Alt key to switch tabs per Tab Cycling setting."]),
+:has(> * > * > * > [title="Permanently display Close button"]) .setting-single:has(.info),
+:has(> * > input[name="StatusBar"]):nth-child(2),
+.selectbox[title="Top"]
+{
+    outline: 3px #ff0 solid;
+    border-radius: 6px;
+    padding: 5px;
+    margin-left: -5px !important;
+}
+
+
+#tabs-tabbar-container, #header{
+    box-shadow: none !important;
+}
