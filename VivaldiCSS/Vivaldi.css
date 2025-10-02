@@ -211,3 +211,5 @@ color: var(--colorAccentFg)}
     border-radius: var(--radius);
 }
 .SpeedDialView-Settings .button-icon{margin-left: 13px;}
+
+.StatusInfo-Content{ border: none !important; outline: none !important; padding: 5.5px !important; border-radius: var(--radius) !important; }
