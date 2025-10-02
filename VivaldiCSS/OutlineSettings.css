@@ -1,0 +1,15 @@
+/**/
+:has(> [title="Scroll over Tab Bar to switch tabs by order, or scroll anywhere else while holding Alt key to switch tabs per Tab Cycling setting."]),
+:has(> * > * > * > [title="Permanently display Close button"]) .setting-single:has(.info),
+:has(> * > input[name="StatusBar"]):nth-child(2),
+.selectbox[title="Top"],
+.SpeedDialView-Settings-StartPage >.row:first-of-type,
+.SpeedDialView-Settings-Appearance :nth-child(5)
+{
+    outline: 3px #ff0 solid;
+    border-radius: 6px;
+    padding: 5px;
+    margin-left: -5px !important;
+}
+.SpeedDialView-Settings-StartPage >.row:first-of-type [value="off"]{background: #ff0; color: #000}
+/**/
