@@ -153,14 +153,28 @@ color: var(--colorAccentFg)}
 
 .transparent-tabbar:not(.color-accent-from-page.color-behind-tabs-on)#browser .tabbar-wrapper, .transparent-tabbar:not(.color-accent-from-page.color-behind-tabs-on)#browser.tabs-top #header, .transparent-tabbar:not(.color-accent-from-page.color-behind-tabs-on)#browser.tabs-bottom #footer{backdrop-filter: none !important;}
 
-.ToolbarButton-Button{
+
+.panel-group .ToolbarButton-Button{padding: 3px;}
+.panel-group .ToolbarButton-Button,.sortselector-dropdown, .panel-group .button-toolbar,
+.sortselector, .sortselector-button, .select-wrapper select, [aria-label="Swap To/From Languages"], .TranslatePanel-BottomToolbar input, .TranslatePanel-ShowTranslateHistory input{
     border: none !important;
     background-image: none !important;
+    border-radius: var(--radius) !important;
+    background-color: var(--colorBgDark);
+    margin-right: 4px !important;
+    padding: 1px;
+
+
 }
+.panel-group{border-radius: 0 10px 0 0 !important}
+.webpanel-header{box-shadow: none !important}
+.panel-group .webpanel-content, #switch{border-radius: 10px 10px 0 0}
+.select-wrapper select{padding: 9px; height: 35px}
+.sortselector-dropdown, .sortselector-button, .panel-group .button-toolbar, [title="Switch to Desktop View"], .panel-group .ToolbarButton-Button{margin-right: 0px !important;}
 .panel [placeholder="Search"] {
     border: none;
     padding: 16px;
-}
+}.TranslatePanel-BottomToolbar [type="submit"]{     padding: 0 10px;   margin-right: auto !important;}
 
 .is-settingspage #main{margin-top: 0 !important; backdrop-filter: none;}
 .is-settingspage #titlebar{backdrop-filter: blur(10px); height: 44px; right: 0px; width: 100vw;}
@@ -169,3 +183,6 @@ color: var(--colorAccentFg)}
 
 .settings-header{ width: calc(100vw - 168px) !important; top: 0px !important; left: 0px !important; height: 44px !important; display: flex !important; justify-content: flex-start !important; padding-left: 20px; z-index: 1; }
 .color-behind-tabs-off .settings-header{color: var(--colorAccentFg) !important}
+
+
+
