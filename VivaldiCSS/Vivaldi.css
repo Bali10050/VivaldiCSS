@@ -82,7 +82,7 @@ color: var(--colorAccentFg)}
 .vivaldi-v>svg{height: 12px;}
 
 
-.toolbar-mainbar{top: 4px}
+.toolbar-mainbar{top: 5px}
 /*.toolbar-spacer-panel{display: none}*/
 .mainbar>div{height: 100%; margin-left: -10px;}
 .bookmark-bar, .bookmarkbarItem{background: none !important; border: none;}
